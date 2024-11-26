@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/css/stylemin.css">
+  <title>new project</title>
+</head>
+
+<body>
+  <div class="container">
+    <header class="header">
+  <h1>Журнал заявок</h1>
+</header>
+    <section id="planner" class="planner">
+  <ul class="planner-list" id="orderList">
+    <li class="planner-item">
+      <div class="item-wrap">
+        <div class="item-auto-info-wrap">
+          <div class="item-auto-info">
+            <div class="item-brand"><span>Toyota </span><span>Land Cruiser</span></div>
+            <div class="item-generation"><span>4 поколение</span></div>
+            <div class="item-drive-type"><span>4WD </span><span>Левый</span></div>
+          </div>
+          <div class="item-auto-tel">
+            <a class="item-tel-link"> 89089430870</a>
+          </div>
+        </div>
+        <div class="item-options">
+          <div class="item-options-title">
+            <div class="item-product">
+              <p>Делаем:</p>
+            </div>
+            <div class="item-kover">
+              <p>Материал:</p>
+            </div>
+            <div class="item-kant">
+              <p>Окантовка:</p>
+            </div>
+            <div class="item-bort">
+              <p>Борты:</p>
+            </div>
+            <div class="item-foot">
+              <p>Подпятник:</p>
+            </div>
+            <div class="item-shields">
+              <p>Шиьлды:</p>
+            </div>
+          </div>
+          <div class="item-options-value">
+            <div class="item-product">
+              <p>Салон</p>
+            </div>
+            <div class="item-kover">
+              <p>Темно-серый</p>
+            </div>
+            <div class="item-kant">
+              <p>черно-красная</p>
+            </div>
+            <div class="item-bort">
+              <p>Есть</p>
+            </div>
+            <div class="item-foot">
+              <p>Есть</p>
+            </div>
+            <div class="item-shields">
+              <p>4</p>
+            </div>
+          </div>
+          <div class="item-coment"><span>чтото про бортики модет про клиента типа он мудак</span></div>
+        </div>
+        <div class="money">
+          <div class="item-cost">
+            <p>Стоимость: <span>4000</span></p>
+          </div>
+          <div class="item-prepay">
+            <p>Предоплата: <span>1000</span></p>
+          </div>
+          <div class="item-balance">
+            <p class="data">Остаток: <span class="data">3000</span></p>
+          </div>
+          <div class="item-other">
+            <div class="item-market">
+              <span>GIS</span>
+            </div>
+            <div class="item-data">
+              <span>23.05.2024</span>
+            </div>
+          </div>
+        </div>
+        <div class="item-btns">
+          <div class="item-button"><button class="item-btn">Состояние: <span>Готов</span></button></div>
+          <div class="item-button"><button class="item-btn item-btn--reduct">Редактировать</button></div>
+        </div>
+      </div>
+    </li>
+  </ul>
+</section>
+    <footer class="footer">
+  <button onclick="openModal()" class="button"></button>
+</footer>
+    <form id="form" class="form disable">
+  <fieldset class="fieldset form-auto disable">
+    <legend class="legend form-auto-legend">Автомобиль</legend>
+    <select class="select" id="brand-select">
+      <option class="option" disabled selected>Выберите бренд</option>
+    </select>
+    <select class="select" id="model-select">
+      <option class="option" disabled selected>Выберите модель</option>
+    </select>
+    <input id="generation" class="select" placeholder="поколение" type="tel">
+    <fieldset class="fieldset-shield fieldset-shield-wheel">
+      <legend class="legend">Руль:</legend>
+      <label class="shield-label">Левый
+        <input class="check-input check-input-wheel" type="radio" name="wheel" value="Левый" checked>
+        <span class="shield-span form-one"></span>
+      </label>
+      <label class="shield-label">Правый
+        <input class="check-input check-input-wheel" type="radio" name="wheel" value="Правый">
+        <span class="shield-span form-one"></span>
+      </label>
+    </fieldset>
+    <fieldset class="fieldset-shield fieldset-shield-privod">
+      <legend class="legend">Привод:</legend>
+      <label class="shield-label">2WD
+        <input class="check-input check-input-privod" type="radio" name="privod" value="2WD" checked>
+        <span class="shield-span form-one"></span>
+      </label>
+      <label class="shield-label">4WD
+        <input class="check-input check-input-privod" type="radio" name="privod" value="4WD">
+        <span class="shield-span form-one"></span>
+      </label>
+    </fieldset>
+    <label><input id="tel" type="tel" class="select" placeholder="телефон"></label>
+    <div class="btns">
+      <button id="btnPrevModalOne" class="btn">Закрыть</button>
+      <button id="btnNextModalOne" class="btn">Вперед</button>
+    </div>
+  </fieldset>
+  <fieldset class="fieldset form-option disable">
+    <legend class="legend form-auto-legend">Опции</legend>
+    <select class="select" id="product">
+      <option class="option">Что делаем</option>
+      <option class="option">салон</option>
+      <option class="option">багажник</option>
+    </select>
+    <select class="select" id="colorKover">
+      <option class="option">Цвет ковра</option>
+      <option class="option">синий</option>
+      <option class="option">коричневый</option>
+    </select>
+    <select class="select" id="colorKant">
+      <option class="option">Цвет канта</option>
+      <option class="option">синий</option>
+      <option class="option">красный</option>
+    </select>
+    <div class="bort-foot">
+      <label class="check-option check-option-bort">Борты
+        <input class="check-input" type="checkbox" placeholder="Подпятник" id="bort">
+        <span class="check-box check-box-bort"></span>
+      </label>
+      <label class="check-option">Подпятник
+        <input class="check-input" type="checkbox" placeholder="Подпятник" id="foot">
+        <span class="check-box check-box-foot"></span>
+      </label>
+    </div>
+    <fieldset class="fieldset-shield">
+      <legend class="legend">Шильды:</legend>
+      <label class="shield-label">0
+        <input class="check-input check-input-shield" type="radio" name="shield" value="0" checked>
+        <span class="shield-span"></span>
+      </label>
+      <label class="shield-label">1
+        <input class="check-input check-input-shield" type="radio" name="shield" value="1">
+        <span class="shield-span"></span>
+      </label>
+      <label class="shield-label">2
+        <input class="check-input check-input-shield" type="radio" name="shield" value="2">
+        <span class="shield-span"></span>
+      </label>
+      <label class="shield-label">4
+        <input class="check-input check-input-shield" type="radio" name="shield" value="4">
+        <span class="shield-span"></span>
+      </label>
+    </fieldset>
+    <div class="prices">
+      <input class="price" type="tel" placeholder="Стоимость общая" id="count">
+      <input class="price" type="tel" placeholder="Предоплата" id="pay">
+    </div>
+    <div class="btns">
+      <button id="btnPrevModalTwo" class="btn ">Назад</button>
+      <button id="btnNextModalTwo" class="btn">Вперед</button>
+    </div>
+  </fieldset>
+  <fieldset class="fieldset fieldset-coment disable">
+    <legend class="legend">Коментарий</legend>
+    <select class="select" id="market">
+      <option class="option">От куда узнали</option>
+      <option class="option">Авито </option>
+      <option class="option">2GIS</option>
+    </select>
+    <textarea class="coment" id="coment"></textarea>
+    <div class="btns">
+      <button id="btnPrevModalThree" class="btn">Назад</button>
+      <button id="send" class="btn">Отправить</button>
+    </div>
+  </fieldset>
+</form>
+  </div>
+
+  <script src="assets/js/scriptmin.js"></script>
+</body>
+
+</html>
